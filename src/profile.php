@@ -5,8 +5,9 @@
     $iduser = $_SESSION['user']['id'];
     $token = session_create_id();
     
-    $sql = "INSERT INTO `sessions`(user_id, session_token) VALUES('$iduser', '$token')";
-    $conn->query($sql);
+    if (mysqli_query($conn, "SELECT * FROM `sessions` WHERE user_id='$iduser'")->num_rows==0) {
+        mysqli_query($conn, "INSERT INTO `sessions`(user_id, session_token) VALUES('$iduser', '$token')");
+    };
 
     $result = mysqli_query($conn, "SELECT * FROM `users` WHERE id='$iduser'");
     $row = $result->fetch_assoc();
