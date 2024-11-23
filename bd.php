@@ -1,5 +1,6 @@
 <?php
 
+//я не смог подключиться к базе данных
 $servername ="151.248.115.10";
 $username = "root";
 $password = "Kwuy1mSu4Y";
