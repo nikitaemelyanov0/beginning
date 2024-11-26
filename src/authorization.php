@@ -13,7 +13,11 @@ $row = $result -> fetch_assoc();
 
 if ($result->num_rows>0) {
     $_SESSION['user']['id'] = $row['id'];
-    header('location: profile.php');
+    if ($row['role']=='admin') {
+        header('location: admin.php');
+    } else {
+        header('location: profile.php');
+    }
 }else {
     echo 'Неправильно введены данные';
 };
