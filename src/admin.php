@@ -12,5 +12,5 @@ $result = mysqli_query($conn, "SELECT * FROM `users`");
 while ($row = $result->fetch_assoc()) {
     $username = $row['username'];
     $email = $row['email'];
-    echo "$username-$email <br>";
+    echo "Имя:$username Почта:$email <br>";
 }
