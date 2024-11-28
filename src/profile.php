@@ -24,10 +24,10 @@
     <h1>Добро пожаловать <?=$row['username']?></h1>
     <h1>Изменить информацию</h1>
     <form action="changeinfo.php" method="post">
-        <input type="text" placeholder="Имя" name="username" value="<?=$row['username']?>"> <br>
+        <input type="text" placeholder="Имя" name="username" value="<?=$row['username']?>"><br>
         <input type="text" placeholder="email" name="email" value="<?=$row['email']?>"><br>
-        <input type="text" placeholder="пароль" name="password" value="<?=$row['password']?>"><br>
-        <button type="submit">Изменить</button> <br>
+        <input type="text" placeholder="пароль" name="password"><br>
+        <button type="submit">Изменить</button>
     </form>
 </body>
 </html>
